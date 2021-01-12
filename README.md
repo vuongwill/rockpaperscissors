@@ -1,3 +1,3 @@
 Javascript rock, paper, scissors game project as part of the Odin curriculum
 
-Live demo: willvxd.github.io/rockpaperscissors
+Live demo: https://willvxd.github.io/rockpaperscissors/
