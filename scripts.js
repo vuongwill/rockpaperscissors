@@ -30,25 +30,43 @@ if (computerSelection === 1) {
 } else {
     computerSelection = 'scissors'
 }
-alert(`Computer picked ${computerSelection}`)
+// alert(`Computer picked ${computerSelection}`)
 
 function game() {
     if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        document.querySelector('#result').innerText = 'Computer picked paper. You win!'
-        
+        document.querySelector('#pcPlay').innerText = 'Computer picked paper.'
+        document.querySelector('#result').innerText = 'You win!'
+        // document.querySelector('#userScore').innerText += 1
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        document.querySelector('#result').innerText = 'Computer picked rock. You win!'
+        document.querySelector('#pcPlay').innerText = 'Computer picked rock.'
+        document.querySelector('#result').innerText = 'You win!'
+        // document.querySelector('#userScore').innerText += 1
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        document.querySelector('#result').innerText = 'Computer picked scissors. You win!'    
+        document.querySelector('#pcPlay').innerText = 'Computer picked scissors.'  
+        document.querySelector('#result').innerText = 'You win!'  
+        // document.querySelector('#userScore').innerText += 1
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        document.querySelector('#result').innerText = 'Computer picked paper. You lose!'
+        document.querySelector('#pcPlay').innerText = 'Computer picked paper.'
+        document.querySelector('#result').innerText = 'You lose!'
+        // document.querySelector('#pcScore').innerText += 1
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        document.querySelector('#result').innerText = 'Computer picked scissors. You lose!'
+        document.querySelector('#pcPlay').innerText = 'Computer picked scissors.'
+        document.querySelector('#result').innerText = 'You lose!'
+        // document.querySelector('#pcScore').innerText += 1
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        document.querySelector('#result').innerText = 'Computer picked rock. You lose!'
+        document.querySelector('#pcPlay').innerText = 'Computer picked rock.'
+        document.querySelector('#result').innerText = 'You lose!'
+        // document.querySelector('#pcScore').innerText += 1
     } else {
-        document.querySelector('#result').innerText = 'Tied.'
-    } 
+        document.querySelector('#result').innerText = ''
+        document.querySelector('#pcPlay').innerText = 'Tied.'
+    }
+    
+    if (document.querySelector('#result').innerText === 'You win!') {
+        document.querySelector('#userScore').innerText++
+    } else if (document.querySelector('#result').innerText === 'You lose!') {
+        document.querySelector('#pcScore').innerText++
+    }
 }
 
         
