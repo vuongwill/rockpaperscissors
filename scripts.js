@@ -34,33 +34,35 @@ if (computerSelection === 1) {
 
 function game() {
     if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        document.querySelector('#pcPlay').innerText = 'Computer picked paper.'
+        // document.querySelector('#pcPlay').innerText = 'Computer picked paper.'
         document.querySelector('#result').innerText = 'You win!'
         // document.querySelector('#userScore').innerText += 1
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        document.querySelector('#pcPlay').innerText = 'Computer picked rock.'
+        // document.querySelector('#pcPlay').innerText = 'Computer picked rock.'
         document.querySelector('#result').innerText = 'You win!'
         // document.querySelector('#userScore').innerText += 1
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        document.querySelector('#pcPlay').innerText = 'Computer picked scissors.'  
+        // document.querySelector('#pcPlay').innerText = 'Computer picked scissors.'  
         document.querySelector('#result').innerText = 'You win!'  
         // document.querySelector('#userScore').innerText += 1
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        document.querySelector('#pcPlay').innerText = 'Computer picked paper.'
+        // document.querySelector('#pcPlay').innerText = 'Computer picked paper.'
         document.querySelector('#result').innerText = 'You lose!'
         // document.querySelector('#pcScore').innerText += 1
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        document.querySelector('#pcPlay').innerText = 'Computer picked scissors.'
+        // document.querySelector('#pcPlay').innerText = 'Computer picked scissors.'
         document.querySelector('#result').innerText = 'You lose!'
         // document.querySelector('#pcScore').innerText += 1
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        document.querySelector('#pcPlay').innerText = 'Computer picked rock.'
+        // document.querySelector('#pcPlay').innerText = 'Computer picked rock.'
         document.querySelector('#result').innerText = 'You lose!'
         // document.querySelector('#pcScore').innerText += 1
     } else {
-        document.querySelector('#result').innerText = ''
-        document.querySelector('#pcPlay').innerText = 'Tied.'
+        document.querySelector('#pcPlay').innerText = `Computer picked ${computerSelection}`
+        document.querySelector('#result').innerText = 'Tied.'
     }
+
+    document.querySelector('#pcPlay').innerText = `Computer picked ${computerSelection}.`
     
     if (document.querySelector('#result').innerText === 'You win!') {
         document.querySelector('#userScore').innerText++
