@@ -8,4 +8,5 @@ section {
 section img {
     width: 20%;
     height: auto;
+    border: 2px black solid
 }
