@@ -6,6 +6,12 @@ document.querySelector('#weapon').addEventListener('click', game)
 
 document.querySelector('#rules').addEventListener('click',toggle)
 
+document.querySelector('#reset').addEventListener('click',refresh)
+
+function refresh() {
+    location.reload()
+}
+
 function toggle() {
     document.querySelector('#rulesList').classList.toggle('hidden')
 }
