@@ -1,33 +1,27 @@
-document.querySelector('#rock').addEventListener('click', rock)
-document.querySelector('#paper').addEventListener('click', paper)
-document.querySelector('#scissors').addEventListener('click', scissors)
-
-document.querySelector('#weapon').addEventListener('click', game)
-
-document.querySelector('#rules').addEventListener('click',toggle)
-
-document.querySelector('#reset').addEventListener('click',refresh)
-
-function refresh() {
-    location.reload()
-}
-
-function toggle() {
-    document.querySelector('#rulesList').classList.toggle('hidden')
-}
-
 let playerSelection
 let computerSelection
 
-function rock() {
+document.querySelector('#rock').addEventListener('click', () => {
     playerSelection = 'rock'
-}
-function paper() {
+})
+
+document.querySelector('#paper').addEventListener('click', () => {
     playerSelection = 'paper'
-}
-function scissors() {
+})
+
+document.querySelector('#scissors').addEventListener('click', () => {
     playerSelection = 'scissors'
-}
+})
+
+document.querySelector('#rules').addEventListener('click', () =>{
+    document.querySelector('#rulesList').classList.toggle('hidden')
+})
+
+document.querySelector('#reset').addEventListener('click', () => {
+    location.reload()
+})
+
+document.querySelector('#weapon').addEventListener('click', game)
 
 function game() {
     let computerSelection = Math.floor(Math.random() * 3) + 1;
