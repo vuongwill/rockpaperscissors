@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <title>Rock, Paper, Scissors</title>
 </head>
@@ -11,6 +14,19 @@
         <h1>
             Choose your weapon!
         </h1>
+        <button id="rules">
+        Rules
+        </button>
+
+        <p id="rulesList" class="hidden">
+            The rules of this duel is are simple. 
+            <br>Pick your weapon. 
+            <br>Rocks wins against scissors.
+            <br>Scissors beats paper.
+            <br>Paper destroys rock.
+            <br>Choose wisely...
+            
+        </p>
     <section id="weapon">
         <img id="rock" src="img/rock.png">
         <img id="paper" src="img/paper.png">
@@ -18,19 +34,16 @@
     </section>
         <h1>
             Score
-            <br>
-            <span>You:</span>
-            <span id='userScore'>0</span>
-            <br>
-            <span>Computer:</span>
-            <span id='pcScore'>0</span>
-            <br>
-            <span id='pcPlay'></span>
-            <span id="result"></span>
         </h1>
+        <h2>
+            <span>You:</span> <span id='userScore'>0</span>
+            <br>
+            <span>Computer:</span> <span id='pcScore'>0</span>
+            <br>
+            <span id='pcPlay'></span> <span id="result"></span>
+        </h2>
 
 
     <script type="text/javascript" src="scripts.js"></script>    
-
 </body>
 </html>

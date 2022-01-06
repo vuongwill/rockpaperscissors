@@ -4,6 +4,12 @@ document.querySelector('#scissors').addEventListener('click', scissors)
 
 document.querySelector('#weapon').addEventListener('click', game)
 
+document.querySelector('#rules').addEventListener('click',toggle)
+
+function toggle() {
+    document.querySelector('#rulesList').classList.toggle('hidden')
+}
+
 let playerSelection
 let computerSelection
 
@@ -16,16 +22,6 @@ function paper() {
 function scissors() {
     playerSelection = 'scissors'
 }
-
-// let computerSelection = Math.floor(Math.random() * 3) + 1;
-
-// if (computerSelection === 1) {
-//     computerSelection = 'rock'
-// } else if (computerSelection === 2) {
-//     computerSelection = 'paper'
-// } else {
-//     computerSelection = 'scissors'
-// }
 
 function game() {
     let computerSelection = Math.floor(Math.random() * 3) + 1;
