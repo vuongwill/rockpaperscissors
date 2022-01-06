@@ -1,25 +1,15 @@
 let playerSelection
 let computerSelection
 
-document.querySelector('#rock').addEventListener('click', () => {
-    playerSelection = 'rock'
-})
+document.querySelector('#rock').addEventListener('click', () => playerSelection = 'rock')
 
-document.querySelector('#paper').addEventListener('click', () => {
-    playerSelection = 'paper'
-})
+document.querySelector('#paper').addEventListener('click', () => playerSelection = 'paper')
 
-document.querySelector('#scissors').addEventListener('click', () => {
-    playerSelection = 'scissors'
-})
+document.querySelector('#scissors').addEventListener('click', () => playerSelection = 'scissors')
 
-document.querySelector('#rules').addEventListener('click', () =>{
-    document.querySelector('#rulesList').classList.toggle('hidden')
-})
+document.querySelector('#rules').addEventListener('click', () => document.querySelector('#rulesList').classList.toggle('hidden'))
 
-document.querySelector('#reset').addEventListener('click', () => {
-    location.reload()
-})
+document.querySelector('#reset').addEventListener('click', () => location.reload())
 
 document.querySelector('#weapon').addEventListener('click', game)
 
