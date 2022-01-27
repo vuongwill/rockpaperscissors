@@ -1,1 +1,1 @@
-Live demo: https://willvxd.github.io/rockpaperscissors/
+Live demo: https://vuongwill.github.io/rockpaperscissors/
